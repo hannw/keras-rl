@@ -66,7 +66,7 @@ class AbstractDQNAgent(Agent):
         return q_values
 
     def compute_q_values(self, state):
-        q_values = self.compute_batch_q_values([state]).flatten()
+        q_values = self.compute_batch_q_values(state).flatten()
         assert q_values.shape == (self.nb_actions,)
         return q_values
 
